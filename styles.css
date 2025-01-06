@@ -111,6 +111,11 @@ button {
     cursor: pointer;
 }
 
+img{
+    width:40px;
+    heigth:40px;
+}
+
 button:hover {
     background: #005fa3;
 }
