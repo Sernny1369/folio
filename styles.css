@@ -1,44 +1,68 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Header and Navigation */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.navbar {
-    list-style: none;
     padding: 0;
-    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header & Navbar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
-.navbar li a {
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f2a365;
 }
 
 /* Hero Section */
 #hero {
-    background: #0077cc;
+    background-color: #222;
     color: white;
-    padding: 2rem 0;
     text-align: center;
+    padding: 100px 20px;
 }
 
 #hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 #hero p {
@@ -47,83 +71,159 @@ header {
 
 /* About Section */
 #about {
-    padding: 2rem;
+    background-color: #fff;
+    padding: 50px 20px;
     text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 /* Projects Section */
 #projects {
-    padding: 2rem;
-    background: #f4f4f4;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr; /* Une seule colonne par ligne */
+    gap: 30px; /* Espacement entre les éléments */
 }
 
+
 .project {
-    background: white;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .project h3 {
-    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .project a {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
-    color: #0077cc;
+    color: #f2a365;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #333;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
 #contact {
-    padding: 2rem;
+    padding: 50px 20px;
+    background-color: #fff;
     text-align: center;
 }
 
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
 form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    text-align: left;
 }
 
-input, textarea, button {
+form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-button {
-    background: #0077cc;
-    color: white;
-    border: none;
     font-size: 1rem;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #f2a365;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-img{
-    width:40px;
-    heigth:40px;
-}
-
-button:hover {
-    background: #005fa3;
+form button:hover {
+    background-color: #e89e5e;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
