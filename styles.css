@@ -52,20 +52,20 @@ nav ul li a:hover {
     color: #f2a365;
 }
 
-/* Hero Section */
-#hero {
+/* intro Section */
+#intro {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 100px 20px;
 }
 
-#hero h1 {
+#intro h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-#hero p {
+#intro p {
     font-size: 1.2rem;
 }
 
@@ -96,12 +96,13 @@ nav ul li a:hover {
 .project-grid {
     display: grid;
     grid-template-columns: 1fr; /* Une seule colonne par ligne */
-    gap: 30px; /* Espacement entre les éléments */
+    gap: 90px; /* Espacement entre les éléments */
 }
 
 
 .project {
-    background-color: white;
+    background-color:whitesmoke;
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -110,6 +111,7 @@ nav ul li a:hover {
 
 .project img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -122,6 +124,8 @@ nav ul li a:hover {
 .project p {
     font-size: 1rem;
     margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project a {
@@ -129,6 +133,8 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
+    display: inline-block; /* Assure que le lien ne sort pas du conteneur */
+    margin-top: 10px; /* Espacement au-dessus du lien */
 }
 
 .project a:hover {
@@ -138,6 +144,13 @@ nav ul li a:hover {
 .project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Library */
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 /* Contact Section */
@@ -192,6 +205,7 @@ form button:hover {
     background-color: #e89e5e;
 }
 
+
 /* Footer */
 footer {
     background-color: #333;
@@ -206,11 +220,11 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #hero h1 {
+    #intro h1 {
         font-size: 2.5rem;
     }
 
-    #hero p {
+    #intro p {
         font-size: 1rem;
     }
 
